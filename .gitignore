@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+JsonChecker/\.vs/
+
+JsonChecker/Debug/
+
+*.sln
+
+*.vcxproj
+
+*.filters
+
+*.db
