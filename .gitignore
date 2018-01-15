@@ -31,6 +31,20 @@
 *.out
 *.app
 
+<<<<<<< HEAD
 *.txt
 cmake-build-debug
 CMakeLists.txt
+=======
+JsonChecker/\.vs/
+
+JsonChecker/Debug/
+
+*.sln
+
+*.vcxproj
+
+*.filters
+
+*.db
+>>>>>>> 0b0e0a51a234f798ff8b7d99390269f2c5281c35
