@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/json.dir/json.cpp.o CMakeFiles/json.dir/jsonTest.cpp.o  -o json /usr/lib/libgtest.a /usr/lib/libgtest_main.a -lpthread 
