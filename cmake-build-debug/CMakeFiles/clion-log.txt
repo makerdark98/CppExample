@@ -1,0 +1,4 @@
+/home/lmu/.jetbrains/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lmu/work/cppexample
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lmu/work/cppexample/cmake-build-debug

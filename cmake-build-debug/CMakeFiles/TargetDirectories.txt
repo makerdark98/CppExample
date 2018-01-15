@@ -1,0 +1,3 @@
+/home/lmu/work/cppexample/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lmu/work/cppexample/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lmu/work/cppexample/cmake-build-debug/CMakeFiles/json.dir
