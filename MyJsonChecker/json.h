@@ -18,7 +18,7 @@ private:
     static bool checkValid(const std::string &jsonData);
 
 public:
-    Json(){};
+    Json();
     Json(const std::string& jsonData);
     Json(const char* jsonData);
 

@@ -4,6 +4,11 @@
 
 #include "json.h"
 
+Json::Json() {
+    this->m_bValid = false;
+    this->m_data = false;
+    this->m_Changed = false;
+}
 Json::Json(const std::string &jsonData) {
     this->setData(jsonData);
 }
@@ -42,8 +47,57 @@ bool Json::isValid() {
     return this->m_bValid;
 }
 
-// TODO : implement Json::checkvalid()
 
 bool Json::checkValid(const std::string &jsonData) {
-    std::stack<int> s;
+    std::stack<char> pair;
+
+    for (auto jsonDatum : jsonData) {
+        switch (jsonDatum) {
+            case '{' :
+                pair.push(jsonDatum);
+                break;
+            case '[':
+                if (pair.top() == ':') {
+                    pair.push(jsonDatum);
+                }
+                break;
+            case '"':
+                if (pair.top() == '"') {
+                    pair.pop();
+                } else {
+                    pair.push(jsonDatum);
+                }
+                break;
+            case ':':
+                pair.push(jsonDatum);
+                break;
+            case ',':
+                if (pair.top() == ':') {
+                    pair.pop();
+                } else {
+                    pair.push(jsonDatum);
+                }
+                break;
+            case ']':
+                while (pair.top() == ',') {
+                    pair.pop();
+                }
+                if (pair.top() == '[') {
+                    pair.pop();
+                }
+                break;
+            case '}':
+                if (pair.top() == ':') {
+                    pair.pop();
+                } else if (pair.top() == '{') {
+                    pair.pop();
+                }
+                break;
+            default:
+                break;
+        }
+
+    }
+    return pair.empty();
 }
+
